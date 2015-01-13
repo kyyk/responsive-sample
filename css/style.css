@@ -1,0 +1,78 @@
+body {
+	padding:2em;
+	font : 100%/1.4 'Helvetica Neue', arial, helvetica, helve, sans-serif;
+	background-image: url(../img/cream_pixels.png);
+	background-repeat: repeat;
+}
+h1 {
+	font-size:2.2em;
+	padding:0 0 .5em 0;
+}
+h2 {
+	font-size:1.8em;
+}
+.header {
+	padding:1em 0;
+}
+.body {
+	margin-bottom: 2em;
+}
+
+.epoch {
+	padding: 2em;
+	border: 3px solid #000;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+.epoch--bgp:hover {
+	background-color: #EF6E95;
+	opacity: 1;
+}
+.epoch--bgp-current {
+	background-color: #EF6E95;
+}
+.epoch--bgb:hover {
+	background-color: #9BD3F4;
+	opacity: 1;
+}
+.epoch--bgb-current {
+	background-color: #9BD3F4;
+}
+.epoch--bgg:hover {
+	background-color: #B5DA69;
+	opacity: 1;
+}
+.epoch--bgg-current {
+	background-color: #B5DA69;
+}
+.maincol {
+	margin-top: 2em;
+}
+.ui-section--title {
+	border-top: 3px solid #000;
+	padding-top: 0.5em;
+	margin-top: 1em;
+}
+.obj {
+	width: 100%;
+}
+.desc {
+	font-weight: bold;
+}
+.mt30 {
+	margin-top: 30px;
+}
+.card {
+	display: block;
+	background: #fff;
+	padding: 1em;
+	box-shadow: 2px 2px 2px rgba(102, 102, 102, 0.1);
+	height: 280px;
+}
+.footer {
+	text-align: center;
+	font-size: 0.8em;
+}
