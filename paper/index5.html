@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="js/paper.js"></script>
+<script type="text/javascript">
+	paper.install(window);
+	window.onload = function() {
+		paper.setup('myCanvas');
+		var tool = new Tool();
+		var path;
+
+		tool.onMouseDown = function(event){
+			path = new Path();
+			path.strokeColor = '#57B196';
+			path.add(event.point);
+		}
+
+		tool.onMouseDrag = function(event){
+			path.add(event.point);
+		}
+	}
+</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize></canvas>
+</body>
+</html>

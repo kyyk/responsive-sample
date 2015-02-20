@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>paper</title>
+	<script type="text/javascript" src="js/paper.js"></script>
+	<script type="text/paperscript" canvas="myCanvas">
+		var path = new Path.Circle({
+			center: view.center,
+			radius: 30,
+			strokeColor: 'blue',
+			fillColor: 'black'
+		});
+		function onResize(event) {
+			path.position = view.center;
+		}
+		var myPoint = new Point(10, 20); 
+		console.log(myPoint);
+		var myPath = new Path();
+		myPath.add(myPoint);
+		var myPoint = new Point();
+		console.log(myPoint);
+
+		myPoint.x = 10;
+
+		myPoint.y = myPoint.x + 10;
+		console.log(myPoint);
+		var myPoint = new Point(20, 40);
+		console.log(myPoint);
+
+		myPoint.x = myPoint.x * 2;
+		console.log(myPoint);
+		var firstPoint = new Point(20, 40);
+		var secondPoint = new Point(firstPoint);
+		console.log(secondPoint);
+
+		secondPoint.y = 20;
+		console.log(secondPoint);
+
+		console.log(firstPoint); 
+	</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize></canvas>
+</body>
+</html>

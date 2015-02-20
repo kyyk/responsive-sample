@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>paper</title>
+	<script type="text/javascript" src="js/paper.js"></script>
+	<script type="text/paperscript" canvas="myCanvas">
+		paper.install(window);
+		window.onload = function() {
+			paper.setup('myCanvas');
+		}
+		var path;
+		function onMouseDown(event) {
+			var color = ['#0094FF','#FF31AD','#5919E8','#0CE87B','#99FF21'];
+			var n = Math.floor(Math.random() * 5);
+			// Create a path:
+			console.log(event.point);
+			path = new Path.Rectangle(event.point, [100,100]);
+			path.strokeColor = color[n];
+
+			view.onFrame = function(event) {
+				path.rotate(3);
+			}
+		}
+	</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize></canvas>
+</body>
+</html>

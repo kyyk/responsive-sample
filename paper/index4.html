@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="js/paper.js"></script>
+<script type="text/javascript">
+	paper.install(window);
+	window.onload = function() {
+		paper.setup('myCanvas');
+		var path = new Path.Rectangle([75,75], [100,100]);
+		path.strokeColor = '#E8E8E7';
+		var path1 = new Path.Rectangle([100,100], [125,125]);
+		path1.strokeColor = '#57B196';
+		var path2 = new Path.Rectangle([125,125], [150,150]);
+		path2.strokeColor = '#FFD25A';
+		var path3 = new Path.Rectangle([150,150], [175,175]);
+		path3.strokeColor = '#FF837B';
+		var path4 = new Path.Rectangle([175,175], [200,200]);
+		path4.strokeColor = '#362F3C';
+
+		view.onFrame = function(event) {
+			path.rotate(3);
+			path1.rotate(3);
+			path2.rotate(3);
+			path3.rotate(3);
+			path4.rotate(3);
+		}
+	}
+</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize></canvas>
+</body>
+</html>

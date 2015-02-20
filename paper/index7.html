@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="js/paper.js"></script>
+<script type="text/javascript">
+	paper.install(window);
+	window.onload = function() {
+		paper.setup('myCanvas');
+var myPath;
+
+function onMouseDown(event) {
+	// The mouse was clicked, so let's put a newly created Path into
+	// myPath, give it the color black and add the location as the
+	// path's first segment.
+	myPath = new Path();
+	myPath.strokeColor = 'black';
+	myPath.add(event.point);
+}
+
+function onMouseUp(event) {
+	// The mouse was released, so we add the new location as the end
+	// segment of the line.
+	myPath.add(event.point);
+}
+		}
+
+</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize></canvas>
+</body>
+</html>
